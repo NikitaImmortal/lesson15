@@ -24,7 +24,7 @@
 //   }
 
 
-// console.log(lastFlavors(flavors));
+//   console.log(flavors[flavors.length - 1])
 
 
 
@@ -38,19 +38,17 @@
     Используйте только те конструкции, которые мы проходили на уроке.
 
 */
-
-// let arr = [ 1, 2, 3, 4, 5 ];
-// let rev = reverse(arr);
-
-// function reverse(arr) {
-//     let rev = new Array;
-//     for (var i = arr.length - 1; i >= 0; i--) {
-//         rev.push(arr[i]);
-//     }
-//     return rev;
+// var arr = [1,2,3,4,5];
+// var temp;
+// for(var i=0,j=arr.length-1; i<j; i++,j--)
+// {
+//     temp = arr[j];
+//     arr[j] = arr[i];
+//     arr[i] = temp;
 // }
+// console.log(arr)
 
-// console.log(rev);
+
 
 /* 
     TASK 3
@@ -61,19 +59,22 @@
      palindroms = ['радар','вор','букет','доход','казак','варяг','потом']
 */
 //    
+
+// let palindroms = ['радар','ВОр','букет','доход','казак','Варяг','потом'];
   
-//  let palindrome = function (word) {
-//     let len = word.length;
-//     let start = word.substring(0, Math.floor(len / 2)).toLowerCase();
-//     let end = word.substring(len - Math.floor(len / 2)).toLowerCase();
-//     let flip = end.split('').reverse().join('');
-//     return (start == flip);
-//  }
+// function isPalindrome(word) {
+//     const firstHalf = word.slice(0, Math.ceil(word.length/2));
+//     const secondHalfReversed = word.slice(Math.floor(word.length/2)).split('').reverse().join('');
 
-//  console.log(palindrome(''));
+//     return firstHalf === secondHalfReversed;
+// }
 
+// function getPalindromesFromArray(arr) {
+//     return arr.filter(isPalindrome);
+// }
 
-  
+// console.log(getPalindromesFromArray(palindroms));
+
 
 /* 
     TASK 4
@@ -82,10 +83,25 @@
     Необходимо найти максимальное число и вывести его в консоль
     
 */
-// const numbers = [444,123,-114,231,775,221,766,-557,0];
+// const numbers = ;
 // const maxValue = Math.max(...numbers);
 // console.log(maxValue);
-     
+
+// var list = [444, 123, -114, 231, 775, 221, 766,-557,0]; 
+// function maxElement(arr){
+//     let max;
+//     let min = arr[0];
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] !== 0 && arr[i] < min){
+//             min = arr[i]; 
+//         } else if (arr[i] !== 0 ){
+//             max = arr[i];
+//         }
+//     }
+//     return max;
+// }
+
+// console.log(maxElement(list));
 /* 
     TASK 5
     
